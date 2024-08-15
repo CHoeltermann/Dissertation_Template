@@ -1,0 +1,31 @@
+% to quickly have templates for tables & stuff.
+\begin{table}[H]
+    \caption[\textbf{}]{\scriptsize{xxx}}
+    \begin{tabular}{lll} 
+     \textbf{a} & \textbf{b} & \textbf{c} \\
+     \hline \hline
+     x & y & z \\
+     \hline
+    \end{tabular}
+    \label{tab:tab_label}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/.png}
+    \caption[\textbf{}]{\textbf{}}
+    \label{fig:fig_label}
+\end{figure}
+
+\begin{sidewaysfigure}
+\centering
+\includesvg[width=\textheight, inkscapelatex=false]{}
+\caption[\textbf{}]{\textbf{}}
+\label{fig:}
+\end{sidewaysfigure}
+
+\begin{wrapfigure}{l}{13cm}
+\includegraphics[scale=0.5]{}
+\caption{\textbf{} }
+\label{fig:}
+\end{wrapfigure}

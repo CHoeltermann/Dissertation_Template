@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAN YOU GUESS THE MOVIE FROM THE CLUES IN THE COMMENTS? %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Creator of the template: Charlotte Hoeltermann
+%%%%%%%%%%%%%%%%%%%%JIM !%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 11pt, oneside, openright]{report}
+\usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%BRISTOL%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helper/packages}
+\usepackage{helper/commands}
+\usepackage{helper/hyphenations}
+\usepackage{helper/gls_entries}
+%%%%%%%%%%%%%THE CAPT`N%%%%%%%%%%%%%%%%%%%%%%%
+%%%FLINTS MAP%%%
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    citestyle=authoryear-comp,
+    natbib=true,
+    sorting=nyt,
+    isbn=false,
+    url=false,
+    eprint=false,
+    date=year,
+    mincitenames=1,
+    maxcitenames=1,
+    uniquename=false,
+    uniquelist=false,
+    giveninits=true
+]{biblatex}
+%\renewcommand*{\bibfont}{\small} % changes references font size
+\addbibresource{bib/bib_articles.bib}
+%%%%%%%%%%%%%%%THE ISLAND%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{roman}
+\setcounter{page}{0}
+\input{0_Titlepages}
+%%%%%%%%%%%%%%WEAPONS AND AMMUNITION%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{personal/Dedication}
+
+\clearpage
+\input{helper/Declaration}
+\clearpage
+\input{personal/Publications}
+
+\begin{spacing}{1.25}
+\tableofcontents
+\end{spacing}
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{0}
+\input{1_Abstract}
+
+%%%%%%%%BULK OF TREASURE%%%%%%%%%%%%%%%%%
+\input{1_Intro}
+\input{2_Methods}
+\input{3_Results}
+\input{4_Discussion}
+\clearpage
+
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+\input{5_Appendix}
+\clearpage
+
+\addcontentsline{toc}{chapter}{References}
+\printbibliography[title=References]
+
+\begin{spacing}{1.25}
+\clearpage
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\printglossary[title={Abbreviations}]
+\clearpage
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\clearpage
+\end{spacing}
+
+\input{personal/CV}
+\clearpage
+\input{personal/Acknowledgements}
+
+\end{document}
+%%% BACK AGAIN %%%
